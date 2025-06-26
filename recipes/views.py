@@ -6,7 +6,7 @@ from .serializers import RecipeSerializer
 from .utils import get_nutritional_info, generate_recipe
 
 
-@api_view(['GET'])
+@api_view(["GET"])
 def recipe_list(request):
     """
     List all recipes.
@@ -15,7 +15,8 @@ def recipe_list(request):
     serializer = RecipeSerializer(recipes, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(['GET'])
+
+@api_view(["GET"])
 def recipe_detail(request, pk):
     """
     Retrieve a specific recipe by its ID.
@@ -27,32 +28,33 @@ def recipe_detail(request, pk):
     except Recipe.DoesNotExist:
         return Response({"error": "Recipe not found"}, status=status.HTTP_404_NOT_FOUND)
 
-@api_view(['POST'])
+
+@api_view(["POST"])
 def generate_recipe(request):
     """
     Generate a recipe based on user input.
     """
     serializer = RecipeSerializer(data=request.data)
     if serializer.is_valid():
-        ing_names = [ingredient['name'] for ingredient in request.data['ingredients']]
-        cuisine = request.data.get('cuisine')
-        diet = request.data.get('diet')
-        difficulty = request.data.get('difficulty')
+        ing_names = [ingredient["name"] for ingredient in request.data["ingredients"]]
+        cuisine = request.data.get("cuisine")
+        diet = request.data.get("diet")
+        difficulty = request.data.get("difficulty")
 
         # generating the recipe instructions and details from gemini
         ai_response = generate_recipe(
-            ingredients=ing_names,
-            cuisine=cuisine,
-            diet=diet,
-            difficulty=difficulty
+            ingredients=ing_names, cuisine=cuisine, diet=diet, difficulty=difficulty
         )
-        if 'error' in ai_response:
-            return Response({"error": ai_response['error']}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        if "error" in ai_response:
+            return Response(
+                {"error": ai_response["error"]},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
 
         recipe_object = serializer.save()
         nutritional_info = get_nutritional_info(recipe_object.ingredients.all())
         recipe_object.nutritional_info = nutritional_info
-        recipe_object.instructions = ai_response.get('text', '')
+        recipe_object.instructions = ai_response.get("text", "")
         recipe_object.save()
 
         final_serializer = RecipeSerializer(recipe_object)

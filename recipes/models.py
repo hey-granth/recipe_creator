@@ -5,6 +5,7 @@ class Ingredient(models.Model):
     """
     A model representing an ingredient, including its name, quantity, unit, allergens, and cost per unit.
     """
+
     name = models.CharField(max_length=100, unique=True)
     quantity = models.DecimalField(max_digits=10, decimal_places=2)
     unit = models.CharField(max_length=50, blank=True, null=True)
@@ -21,6 +22,7 @@ class Recipe(models.Model):
     """
     A model representing a recipe, including its ingredients, instructions, and nutritional information.
     """
+
     dietary_choices = [
         ("vegan", "Vegan"),
         ("vegetarian", "Vegetarian"),

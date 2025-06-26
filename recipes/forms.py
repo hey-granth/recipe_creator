@@ -6,6 +6,7 @@ class RecipeForm(forms.Form):
     """
     Form for creating or updating a recipe.
     """
+
     title = forms.CharField(max_length=100, label="Recipe Title")
     description = forms.CharField(widget=forms.Textarea, label="Description")
     ingredients = forms.ModelMultipleChoiceField(
