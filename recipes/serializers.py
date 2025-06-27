@@ -10,6 +10,7 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 class RecipeSerializer(serializers.ModelSerializer):
     ingredients = IngredientSerializer(many=True)
+    instructions = serializers.CharField(required=False)
 
     class Meta:
         model = Recipe

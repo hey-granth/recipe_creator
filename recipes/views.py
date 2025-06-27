@@ -3,7 +3,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Recipe
 from .serializers import RecipeSerializer
-from .utils import get_nutritional_info, generate_recipe
+from .utils import get_nutritional_info, generate_recipe_content
+from typing import Any
 
 
 @api_view(["GET"])
@@ -36,14 +37,14 @@ def generate_recipe(request):
     """
     serializer = RecipeSerializer(data=request.data)
     if serializer.is_valid():
-        ing_names = [ingredient["name"] for ingredient in request.data["ingredients"]]
-        cuisine = request.data.get("cuisine")
-        diet = request.data.get("diet")
-        difficulty = request.data.get("difficulty")
+        ing_names: list = [ingredient["name"] for ingredient in request.data["ingredients"]]
+        cuisine: Any = request.data.get("cuisine")
+        diet: Any = request.data.get("dietary_restrictions")
+        difficulty: Any = request.data.get("difficulty")
 
         # generating the recipe instructions and details from gemini
-        ai_response = generate_recipe(
-            ingredients=ing_names, cuisine=cuisine, diet=diet, difficulty=difficulty
+        ai_response: dict[str, str] = generate_recipe_content(
+            ingredients=ing_names, cuisine=cuisine, dietary_restrictions=diet, difficulty=difficulty
         )
         if "error" in ai_response:
             return Response(
@@ -51,9 +52,11 @@ def generate_recipe(request):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
 
-        recipe_object = serializer.save()
-        nutritional_info = get_nutritional_info(recipe_object.ingredients.all())
+        recipe_object: Any = serializer.save()
+
+        nutritional_info: dict[str, str] = get_nutritional_info(recipe_object.ingredients.all())
         recipe_object.nutritional_info = nutritional_info
+
         recipe_object.instructions = ai_response.get("text", "")
         recipe_object.save()
 

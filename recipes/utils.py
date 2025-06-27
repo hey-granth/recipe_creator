@@ -13,8 +13,8 @@ client = genai.Client(api_key=GOOGLE_AI_STUDIO_API_KEY)
 
 
 # using the Google AI Studio API to generate a recipe based on user input
-def generate_recipe(
-    ingredients: str, cuisine: str, dietary_restrictions: str, difficulty: str
+def generate_recipe_content(
+    ingredients: list, cuisine: str, dietary_restrictions: str, difficulty: str
 ) -> dict[str, str]:
     """
     Generate a recipe using Google AI Studio API based on user input.

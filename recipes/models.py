@@ -58,7 +58,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     ingredients = models.ManyToManyField(Ingredient)
-    instructions = models.TextField()
+    instructions = models.TextField(blank=True, null=True)
     dietary_restrictions = models.CharField(
         choices=dietary_choices, max_length=100, default="none"
     )
