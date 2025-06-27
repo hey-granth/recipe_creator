@@ -19,7 +19,25 @@ class RecipeSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         ingredients_data = validated_data.pop("ingredients", [])
         recipe = Recipe.objects.create(**validated_data)
+
         for ingredient_data in ingredients_data:
-            ingredient, _ = Ingredient.objects.get_or_create(**ingredient_data)
+            name = str(ingredient_data.get("name", "")).strip().lower()
+            unit = str(ingredient_data.get("unit", "")).strip().lower()
+            quantity = str(ingredient_data.get("quantity", "")).strip().lower()
+
+            ingredient = Ingredient.objects.filter(
+                name=name,
+                unit=unit,
+                quantity=quantity
+            ).first()
+
+            if not ingredient:
+                ingredient = Ingredient.objects.create(
+                    name=name,
+                    unit=unit,
+                    quantity=quantity
+                )
+
             recipe.ingredients.add(ingredient)
+
         return recipe
