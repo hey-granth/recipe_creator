@@ -37,14 +37,19 @@ def generate_recipe(request):
     """
     serializer = RecipeSerializer(data=request.data)
     if serializer.is_valid():
-        ing_names: list = [ingredient["name"] for ingredient in request.data["ingredients"]]
+        ing_names: list = [
+            ingredient["name"] for ingredient in request.data["ingredients"]
+        ]
         cuisine: Any = request.data.get("cuisine")
         diet: Any = request.data.get("dietary_restrictions")
         difficulty: Any = request.data.get("difficulty")
 
         # generating the recipe instructions and details from gemini
         ai_response: dict[str, str] = generate_recipe_content(
-            ingredients=ing_names, cuisine=cuisine, dietary_restrictions=diet, difficulty=difficulty
+            ingredients=ing_names,
+            cuisine=cuisine,
+            dietary_restrictions=diet,
+            difficulty=difficulty,
         )
         if "error" in ai_response:
             return Response(
@@ -54,7 +59,9 @@ def generate_recipe(request):
 
         recipe_object: Any = serializer.save()
 
-        nutritional_info: dict[str, str] = get_nutritional_info(recipe_object.ingredients.all())
+        nutritional_info: dict[str, str] = get_nutritional_info(
+            recipe_object.ingredients.all()
+        )
         recipe_object.nutritional_info = nutritional_info
 
         recipe_object.instructions = ai_response.get("text", "")
