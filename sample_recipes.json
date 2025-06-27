@@ -1,0 +1,1052 @@
+[
+    {
+        "model": "recipes.ingredient",
+        "pk": 100,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 101,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 1,
+        "fields": {
+            "title": "Vegan Tomato Pasta 1",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "easy",
+            "prep_time": 10,
+            "cook_time": 20,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 350,
+                "protein": "10g"
+            },
+            "created_at": "2025-06-27T05:21:03.315010"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 103,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 104,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 2,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 2",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "medium",
+            "prep_time": 11,
+            "cook_time": 21,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 355,
+                "protein": "11g"
+            },
+            "created_at": "2025-06-27T05:21:03.315034"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 106,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 107,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 3,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 3",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "hard",
+            "prep_time": 12,
+            "cook_time": 22,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 360,
+                "protein": "12g"
+            },
+            "created_at": "2025-06-27T05:21:03.315045"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 109,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 110,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 4,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 4",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "easy",
+            "prep_time": 13,
+            "cook_time": 23,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 365,
+                "protein": "13g"
+            },
+            "created_at": "2025-06-27T05:21:03.315058"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 112,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 113,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 5,
+        "fields": {
+            "title": "Vegan Tomato Pasta 5",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "medium",
+            "prep_time": 14,
+            "cook_time": 24,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 370,
+                "protein": "14g"
+            },
+            "created_at": "2025-06-27T05:21:03.315066"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 115,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 116,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 6,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 6",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "hard",
+            "prep_time": 10,
+            "cook_time": 25,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 375,
+                "protein": "10g"
+            },
+            "created_at": "2025-06-27T05:21:03.315073"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 118,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 119,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 7,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 7",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "easy",
+            "prep_time": 11,
+            "cook_time": 26,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 380,
+                "protein": "11g"
+            },
+            "created_at": "2025-06-27T05:21:03.315080"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 121,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 122,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 8,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 8",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "medium",
+            "prep_time": 12,
+            "cook_time": 27,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 385,
+                "protein": "12g"
+            },
+            "created_at": "2025-06-27T05:21:03.315093"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 124,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 125,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 9,
+        "fields": {
+            "title": "Vegan Tomato Pasta 9",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "hard",
+            "prep_time": 13,
+            "cook_time": 28,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 390,
+                "protein": "13g"
+            },
+            "created_at": "2025-06-27T05:21:03.315101"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 127,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 128,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 10,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 10",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "easy",
+            "prep_time": 14,
+            "cook_time": 29,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 395,
+                "protein": "14g"
+            },
+            "created_at": "2025-06-27T05:21:03.315107"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 130,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 131,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 11,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 11",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "medium",
+            "prep_time": 10,
+            "cook_time": 20,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 400,
+                "protein": "10g"
+            },
+            "created_at": "2025-06-27T05:21:03.315113"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 133,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 134,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 12,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 12",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "hard",
+            "prep_time": 11,
+            "cook_time": 21,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 405,
+                "protein": "11g"
+            },
+            "created_at": "2025-06-27T05:21:03.315120"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 136,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 137,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 13,
+        "fields": {
+            "title": "Vegan Tomato Pasta 13",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "easy",
+            "prep_time": 12,
+            "cook_time": 22,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 410,
+                "protein": "12g"
+            },
+            "created_at": "2025-06-27T05:21:03.315125"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 139,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 140,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 14,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 14",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "medium",
+            "prep_time": 13,
+            "cook_time": 23,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 415,
+                "protein": "13g"
+            },
+            "created_at": "2025-06-27T05:21:03.315131"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 142,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 143,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 15,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 15",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "hard",
+            "prep_time": 14,
+            "cook_time": 24,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 420,
+                "protein": "14g"
+            },
+            "created_at": "2025-06-27T05:21:03.315137"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 145,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 146,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 16,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 16",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "easy",
+            "prep_time": 10,
+            "cook_time": 25,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 425,
+                "protein": "10g"
+            },
+            "created_at": "2025-06-27T05:21:03.315143"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 148,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 149,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 17,
+        "fields": {
+            "title": "Vegan Tomato Pasta 17",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "medium",
+            "prep_time": 11,
+            "cook_time": 26,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 430,
+                "protein": "11g"
+            },
+            "created_at": "2025-06-27T05:21:03.315355"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 151,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 152,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 18,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 18",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "hard",
+            "prep_time": 12,
+            "cook_time": 27,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 435,
+                "protein": "12g"
+            },
+            "created_at": "2025-06-27T05:21:03.315368"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 154,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 155,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 19,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 19",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "easy",
+            "prep_time": 13,
+            "cook_time": 28,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 440,
+                "protein": "13g"
+            },
+            "created_at": "2025-06-27T05:21:03.315379"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 157,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 158,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 20,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 20",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "medium",
+            "prep_time": 14,
+            "cook_time": 29,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 445,
+                "protein": "14g"
+            },
+            "created_at": "2025-06-27T05:21:03.315389"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 160,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 161,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 21,
+        "fields": {
+            "title": "Vegan Tomato Pasta 21",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "hard",
+            "prep_time": 10,
+            "cook_time": 20,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 450,
+                "protein": "10g"
+            },
+            "created_at": "2025-06-27T05:21:03.315397"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 163,
+        "fields": {
+            "name": "Quinoa",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 164,
+        "fields": {
+            "name": "Cucumber",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 22,
+        "fields": {
+            "title": "Gluten-Free Quinoa Salad 22",
+            "description": "Delicious gluten-free quinoa salad variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "gluten_free",
+            "cuisine": "indian",
+            "difficulty": "easy",
+            "prep_time": 11,
+            "cook_time": 21,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 455,
+                "protein": "11g"
+            },
+            "created_at": "2025-06-27T05:21:03.315405"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 166,
+        "fields": {
+            "name": "Chicken Breast",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 167,
+        "fields": {
+            "name": "Broccoli",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 23,
+        "fields": {
+            "title": "Keto Chicken Stir Fry 23",
+            "description": "Delicious keto chicken stir fry variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "keto",
+            "cuisine": "mexican",
+            "difficulty": "medium",
+            "prep_time": 12,
+            "cook_time": 22,
+            "servings": 3,
+            "nutritional_info": {
+                "calories": 460,
+                "protein": "12g"
+            },
+            "created_at": "2025-06-27T05:21:03.315411"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 169,
+        "fields": {
+            "name": "Paneer",
+            "quantity": "250",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 170,
+        "fields": {
+            "name": "Bell Pepper",
+            "quantity": "1",
+            "unit": "cup",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 24,
+        "fields": {
+            "title": "Vegetarian Paneer Tikka 24",
+            "description": "Delicious vegetarian paneer tikka variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegetarian",
+            "cuisine": "chinese",
+            "difficulty": "hard",
+            "prep_time": 13,
+            "cook_time": 23,
+            "servings": 4,
+            "nutritional_info": {
+                "calories": 465,
+                "protein": "13g"
+            },
+            "created_at": "2025-06-27T05:21:03.315421"
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 172,
+        "fields": {
+            "name": "Tomato",
+            "quantity": "2",
+            "unit": "cups",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.ingredient",
+        "pk": 173,
+        "fields": {
+            "name": "Pasta",
+            "quantity": "200",
+            "unit": "grams",
+            "allergens": "",
+            "cost_per_unit": 1.0
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 25,
+        "fields": {
+            "title": "Vegan Tomato Pasta 25",
+            "description": "Delicious vegan tomato pasta variation.",
+            "instructions": "1. Prep ingredients.\n2. Cook.\n3. Serve.",
+            "dietary_restrictions": "vegan",
+            "cuisine": "italian",
+            "difficulty": "easy",
+            "prep_time": 14,
+            "cook_time": 24,
+            "servings": 2,
+            "nutritional_info": {
+                "calories": 470,
+                "protein": "14g"
+            },
+            "created_at": "2025-06-27T05:21:03.315427"
+        }
+    }
+]
