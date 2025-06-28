@@ -41,7 +41,7 @@ class Recipe(models.Model):
     cuisine_choices = [
         ("indian", "Indian"),
         ("italian", "Italian"),
-        ("mexican", "Mezican"),
+        ("mexican", "Mexican"),
         ("chinese", "Chinese"),
         ("japanese", "Japanese"),
         ("french", "French"),

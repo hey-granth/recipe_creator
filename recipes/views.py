@@ -70,4 +70,5 @@ def generate_recipe(request):
         final_serializer = RecipeSerializer(recipe_object)
         return Response(final_serializer.data, status=status.HTTP_201_CREATED)
 
+    print("❌ Serializer Errors:", serializer.errors)  # Add this line
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Recipe Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <h1>AI-Powered Recipe Generator</h1>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2 class="form-title">Generate Your Custom Recipe</h2>
+        <form id="recipeForm" class="form-grid">
+            <div class="form-group">
+                <label for="ingredients">Ingredients *</label>
+                <textarea id="ingredients" name="ingredients" placeholder="Enter ingredients (e.g., chicken, tomatoes, onions)" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cuisine">Cuisine *</label>
+                    <select id="cuisine" name="cuisine" required>
+                        <option value="">Select Cuisine</option>
+                        <option value="indian">Indian</option>
+                        <option value="italian">Italian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="french">French</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Restriction</label>
+                    <select id="dietary" name="dietary_restrictions">
+                        <option value="none">None</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="gluten_free">Gluten Free</option>
+                        <option value="dairy_free">Dairy Free</option>
+                        <option value="nut_free">Nut Free</option>
+                        <option value="halal">Halal</option>
+                        <option value="kosher">Kosher</option>
+                        <option value="paleo">Paleo</option>
+                        <option value="keto">Keto</option>
+                        <option value="low_carb">Low Carb</option>
+                        <option value="high_protein">High Protein</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="difficulty">Difficulty *</label>
+                    <select id="difficulty" name="difficulty" required>
+                        <option value="">Select Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="servings">Servings *</label>
+                    <input type="number" id="servings" name="servings" min="1" max="20" placeholder="4" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="prepTime">Prep Time (min) *</label>
+                    <input type="number" id="prepTime" name="prepTime" min="1" max="300" placeholder="15" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cookTime">Cook Time (min) *</label>
+                    <input type="number" id="cookTime" name="cookTime" min="1" max="480" placeholder="30" required>
+                </div>
+            </div>
+
+            <button type="submit" class="generate-btn" id="generateBtn">
+                <span class="loader" id="loader"></span>
+                <span id="btnText">Generate Recipe</span>
+            </button>
+
+            <div class="error-message" id="errorMessage"></div>
+        </form>
+    </section>
+
+    <!-- Response Section -->
+    <section class="response-section" id="responseSection" style="display: none;">
+        <h2 class="recipe-title" id="recipeTitle">Your Recipe</h2>
+
+        <div class="recipe-section">
+            <h3><i class="fas fa-list"></i> Ingredients</h3>
+            <ul id="recipeIngredients"></ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3><i class="fas fa-utensils"></i> Instructions</h3>
+            <div id="recipeInstructions"></div>
+        </div>
+
+        <div class="recipe-section">
+            <h3><i class="fas fa-chart-pie"></i> Nutritional Information</h3>
+            <div class="nutrition-grid" id="nutritionInfo"></div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-name">Granth Agarwal</div>
+        <div class="social-links">
+            <a href="https://github.com/hey-granth" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/granth-agarwal" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/heygranth" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
