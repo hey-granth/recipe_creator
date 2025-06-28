@@ -26,16 +26,12 @@ class RecipeSerializer(serializers.ModelSerializer):
             quantity = str(ingredient_data.get("quantity", "")).strip().lower()
 
             ingredient = Ingredient.objects.filter(
-                name=name,
-                unit=unit,
-                quantity=quantity
+                name=name, unit=unit, quantity=quantity
             ).first()
 
             if not ingredient:
                 ingredient = Ingredient.objects.create(
-                    name=name,
-                    unit=unit,
-                    quantity=quantity
+                    name=name, unit=unit, quantity=quantity
                 )
 
             recipe.ingredients.add(ingredient)

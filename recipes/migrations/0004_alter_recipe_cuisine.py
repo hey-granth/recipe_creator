@@ -4,15 +4,27 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('recipes', '0003_alter_ingredient_name'),
+        ("recipes", "0003_alter_ingredient_name"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='recipe',
-            name='cuisine',
-            field=models.CharField(choices=[('indian', 'Indian'), ('italian', 'Italian'), ('mexican', 'Mexican'), ('chinese', 'Chinese'), ('japanese', 'Japanese'), ('french', 'French'), ('spanish', 'Spanish'), ('other', 'Other')], default='none', max_length=30),
+            model_name="recipe",
+            name="cuisine",
+            field=models.CharField(
+                choices=[
+                    ("indian", "Indian"),
+                    ("italian", "Italian"),
+                    ("mexican", "Mexican"),
+                    ("chinese", "Chinese"),
+                    ("japanese", "Japanese"),
+                    ("french", "French"),
+                    ("spanish", "Spanish"),
+                    ("other", "Other"),
+                ],
+                default="none",
+                max_length=30,
+            ),
         ),
     ]

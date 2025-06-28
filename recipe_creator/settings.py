@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "recipes",
     "rest_framework",
-    'corsheaders',
+    "corsheaders",
     "drf_spectacular",
 ]
 

@@ -4,42 +4,125 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
-    replaces = [('recipes', '0001_initial'), ('recipes', '0002_alter_recipe_instructions'), ('recipes', '0003_alter_ingredient_name'), ('recipes', '0004_alter_recipe_cuisine')]
+    replaces = [
+        ("recipes", "0001_initial"),
+        ("recipes", "0002_alter_recipe_instructions"),
+        ("recipes", "0003_alter_ingredient_name"),
+        ("recipes", "0004_alter_recipe_cuisine"),
+    ]
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Ingredient',
+            name="Ingredient",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('quantity', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('unit', models.CharField(blank=True, max_length=50, null=True)),
-                ('allergens', models.CharField(blank=True, max_length=200, null=True)),
-                ('cost_per_unit', models.DecimalField(blank=True, decimal_places=2, default=0.0, max_digits=1000, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("quantity", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("unit", models.CharField(blank=True, max_length=50, null=True)),
+                ("allergens", models.CharField(blank=True, max_length=200, null=True)),
+                (
+                    "cost_per_unit",
+                    models.DecimalField(
+                        blank=True,
+                        decimal_places=2,
+                        default=0.0,
+                        max_digits=1000,
+                        null=True,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Recipe',
+            name="Recipe",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('instructions', models.TextField(blank=True, null=True)),
-                ('dietary_restrictions', models.CharField(choices=[('vegan', 'Vegan'), ('vegetarian', 'Vegetarian'), ('gluten_free', 'Gluten Free'), ('dairy_free', 'Dairy Free'), ('nut_free', 'Nut Free'), ('halal', 'Halal'), ('kosher', 'Kosher'), ('paleo', 'Paleo'), ('keto', 'Keto'), ('low_carb', 'Low Carb'), ('high_protein', 'High Protein'), ('none', 'None')], default='none', max_length=100)),
-                ('cuisine', models.CharField(choices=[('indian', 'Indian'), ('italian', 'Italian'), ('mexican', 'Mexican'), ('chinese', 'Chinese'), ('japanese', 'Japanese'), ('french', 'French'), ('spanish', 'Spanish'), ('other', 'Other')], default='none', max_length=30)),
-                ('difficulty', models.CharField(choices=[('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], default='easy', max_length=10)),
-                ('prep_time', models.PositiveIntegerField(help_text='Preparation time in minutes')),
-                ('cook_time', models.PositiveIntegerField(help_text='Cooking time in minutes')),
-                ('servings', models.PositiveIntegerField(default=1)),
-                ('nutritional_info', models.JSONField(blank=True, null=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('ingredients', models.ManyToManyField(to='recipes.ingredient')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=100)),
+                ("description", models.TextField()),
+                ("instructions", models.TextField(blank=True, null=True)),
+                (
+                    "dietary_restrictions",
+                    models.CharField(
+                        choices=[
+                            ("vegan", "Vegan"),
+                            ("vegetarian", "Vegetarian"),
+                            ("gluten_free", "Gluten Free"),
+                            ("dairy_free", "Dairy Free"),
+                            ("nut_free", "Nut Free"),
+                            ("halal", "Halal"),
+                            ("kosher", "Kosher"),
+                            ("paleo", "Paleo"),
+                            ("keto", "Keto"),
+                            ("low_carb", "Low Carb"),
+                            ("high_protein", "High Protein"),
+                            ("none", "None"),
+                        ],
+                        default="none",
+                        max_length=100,
+                    ),
+                ),
+                (
+                    "cuisine",
+                    models.CharField(
+                        choices=[
+                            ("indian", "Indian"),
+                            ("italian", "Italian"),
+                            ("mexican", "Mexican"),
+                            ("chinese", "Chinese"),
+                            ("japanese", "Japanese"),
+                            ("french", "French"),
+                            ("spanish", "Spanish"),
+                            ("other", "Other"),
+                        ],
+                        default="none",
+                        max_length=30,
+                    ),
+                ),
+                (
+                    "difficulty",
+                    models.CharField(
+                        choices=[
+                            ("easy", "Easy"),
+                            ("medium", "Medium"),
+                            ("hard", "Hard"),
+                        ],
+                        default="easy",
+                        max_length=10,
+                    ),
+                ),
+                (
+                    "prep_time",
+                    models.PositiveIntegerField(
+                        help_text="Preparation time in minutes"
+                    ),
+                ),
+                (
+                    "cook_time",
+                    models.PositiveIntegerField(help_text="Cooking time in minutes"),
+                ),
+                ("servings", models.PositiveIntegerField(default=1)),
+                ("nutritional_info", models.JSONField(blank=True, null=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("ingredients", models.ManyToManyField(to="recipes.ingredient")),
             ],
         ),
     ]

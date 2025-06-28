@@ -2,34 +2,37 @@ from django.urls import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
 from recipes.models import Ingredient, Recipe
-from rest_framework.response import Response
+
 
 class RecipeAPITests(APITestCase):
-
     def setUp(self):
-        self.ingredient1 = Ingredient.objects.create(name="Tomato", quantity="2", unit="pieces")
-        self.ingredient2 = Ingredient.objects.create(name="Pasta", quantity="200", unit="grams")
+        self.ingredient1 = Ingredient.objects.create(
+            name="Tomato", quantity="2", unit="pieces"
+        )
+        self.ingredient2 = Ingredient.objects.create(
+            name="Pasta", quantity="200", unit="grams"
+        )
 
         self.valid_payload = {
             "title": "Tomato Pasta",
             "description": "Delicious tomato pasta",
             "ingredients": [
                 {"name": "Tomato", "quantity": "2", "unit": "pieces"},
-                {"name": "Pasta", "quantity": "200", "unit": "grams"}
+                {"name": "Pasta", "quantity": "200", "unit": "grams"},
             ],
             "cuisine": "italian",
             "dietary_restrictions": "vegan",
             "difficulty": "easy",
             "prep_time": 10,
             "cook_time": 20,
-            "servings": 2
+            "servings": 2,
         }
 
     def test_generate_recipe_success(self):
         response = self.client.post(
             reverse("generate_recipe"),  # Make sure this matches your urls.py name
             data=self.valid_payload,
-            format="json"
+            format="json",
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertIn("instructions", response.data)
@@ -40,9 +43,7 @@ class RecipeAPITests(APITestCase):
         incomplete_payload.pop("title")
 
         response = self.client.post(
-            reverse("generate_recipe"),
-            data=incomplete_payload,
-            format="json"
+            reverse("generate_recipe"), data=incomplete_payload, format="json"
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn("title", response.data)
@@ -57,11 +58,13 @@ class RecipeAPITests(APITestCase):
             servings=1,
             cuisine="italian",
             dietary_restrictions="none",
-            difficulty="easy"
+            difficulty="easy",
         )
         recipe.ingredients.add(self.ingredient1, self.ingredient2)
 
-        response = self.client.get(reverse("recipe_list"))  # Ensure this name exists in urls.py
+        response = self.client.get(
+            reverse("recipe_list")
+        )  # Ensure this name exists in urls.py
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertGreaterEqual(len(response.data), 1)
 
