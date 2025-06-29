@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import JSONField
 
 
 class Ingredient(models.Model):
@@ -6,15 +7,15 @@ class Ingredient(models.Model):
     A model representing an ingredient, including its name, quantity, unit, allergens, and cost per unit.
     """
 
-    name = models.CharField(max_length=100)
+    name: str = models.CharField(max_length=100)
     quantity = models.DecimalField(max_digits=10, decimal_places=2)
-    unit = models.CharField(max_length=50, blank=True, null=True)
-    allergens = models.CharField(max_length=200, blank=True, null=True)
+    unit: str = models.CharField(max_length=50, blank=True, null=True)
+    allergens: str = models.CharField(max_length=200, blank=True, null=True)
     cost_per_unit = models.DecimalField(
         blank=True, null=True, decimal_places=2, default=0.0, max_digits=1000
     )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
 
@@ -23,7 +24,7 @@ class Recipe(models.Model):
     A model representing a recipe, including its ingredients, instructions, and nutritional information.
     """
 
-    dietary_choices = [
+    dietary_choices: list[tuple[str, str]] = [
         ("vegan", "Vegan"),
         ("vegetarian", "Vegetarian"),
         ("gluten_free", "Gluten Free"),
@@ -38,7 +39,7 @@ class Recipe(models.Model):
         ("none", "None"),
     ]
 
-    cuisine_choices = [
+    cuisine_choices: list[tuple[str, str]] = [
         ("indian", "Indian"),
         ("italian", "Italian"),
         ("mexican", "Mexican"),
@@ -49,37 +50,37 @@ class Recipe(models.Model):
         ("other", "Other"),
     ]
 
-    difficulty_choices = [
+    difficulty_choices: list[tuple[str, str]] = [
         ("easy", "Easy"),
         ("medium", "Medium"),
         ("hard", "Hard"),
     ]
 
-    title = models.CharField(max_length=100)
-    description = models.TextField()
+    title: str = models.CharField(max_length=100)
+    description: str = models.TextField()
     ingredients = models.ManyToManyField(Ingredient)
-    instructions = models.TextField(blank=True, null=True)
-    dietary_restrictions = models.CharField(
+    instructions: str = models.TextField(blank=True, null=True)
+    dietary_restrictions: str = models.CharField(
         choices=dietary_choices, max_length=100, default="none"
     )
-    cuisine = models.CharField(choices=cuisine_choices, max_length=30, default="none")
-    difficulty = models.CharField(
+    cuisine: str = models.CharField(choices=cuisine_choices, max_length=30, default="none")
+    difficulty: str = models.CharField(
         choices=difficulty_choices, max_length=10, default="easy"
     )
-    prep_time = models.PositiveIntegerField(help_text="Preparation time in minutes")
-    cook_time = models.PositiveIntegerField(help_text="Cooking time in minutes")
-    servings = models.PositiveIntegerField(default=1)
-    nutritional_info = models.JSONField(blank=True, null=True)
+    prep_time: int = models.PositiveIntegerField(help_text="Preparation time in minutes")
+    cook_time: int = models.PositiveIntegerField(help_text="Cooking time in minutes")
+    servings: int = models.PositiveIntegerField(default=1)
+    nutritional_info: JSONField = models.JSONField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.title
 
-    def measure_ingredients(self, new_servings):
+    def measure_ingredients(self, new_servings) -> None:
         """
         Measure the ingredients for a new number of servings.
         """
-        factor = new_servings / self.servings
+        factor: float = new_servings / self.servings
         for ingredient in self.ingredients.all():
             try:
                 quantity = ingredient.quantity * factor

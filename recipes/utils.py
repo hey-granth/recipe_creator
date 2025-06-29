@@ -45,17 +45,17 @@ def get_nutritional_info(ingredients: list) -> dict[str, str]:
     """
     Get nutritional information for a list of ingredients using the Nutritionix API.
     """
-    url = "https://trackapi.nutritionix.com/v2/natural/nutrients"
-    headers = {
+    url: str = "https://trackapi.nutritionix.com/v2/natural/nutrients"
+    headers: dict[str, str | None] = {
         "x-app-id": NUTRITIONIX_APP_ID,
         "x-app-key": NUTRITIONIX_API_KEY,
         "Content-Type": "application/json",
     }
 
-    query = "\n".join(
+    query: str = "\n".join(
         [f"{i.quantity} {i.name}" for i in ingredients if i.quantity and i.name]
     )
-    data = {"query": query, "timezone": "Asia/Kolkata"}
+    data: dict[str, str] = {"query": query, "timezone": "Asia/Kolkata"}
 
     try:
         response = requests.post(url, headers=headers, json=data)

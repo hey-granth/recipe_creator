@@ -16,7 +16,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         model = Recipe
         fields = "__all__"
 
-    def create(self, validated_data):
+    def create(self, validated_data) -> Recipe:
         ingredients_data = validated_data.pop("ingredients", [])
         recipe = Recipe.objects.create(**validated_data)
 

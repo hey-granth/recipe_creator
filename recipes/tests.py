@@ -5,7 +5,7 @@ from recipes.models import Ingredient, Recipe
 
 
 class RecipeAPITests(APITestCase):
-    def setUp(self):
+    def setUp(self) -> None:
         self.ingredient1 = Ingredient.objects.create(
             name="Tomato", quantity="2", unit="pieces"
         )
